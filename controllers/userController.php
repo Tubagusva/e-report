@@ -1,6 +1,6 @@
 <?php
 include("../database/connect.php");
-session_start();
+
 
 function createReport($data)
 {
