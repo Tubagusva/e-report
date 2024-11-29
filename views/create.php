@@ -77,29 +77,6 @@ if(isset($_GET['createReport'])) {
         </div>
     </div>
 
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-            <div class="container"> -->
-                <!-- Toggle Button for Mobile -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                <!-- Links -->
-                <!-- <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.php">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="views/create.php">Create Report</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../auth/logout.php">Log Out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
     </header>
     <main>
 

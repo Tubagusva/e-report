@@ -46,71 +46,48 @@ $data = mysqli_fetch_assoc($result);
     <header>
     <div class="d-flex">
         <!-- Sidebar -->
-        <nav class="bg-dark text-white vh-100" style="width: 250px;">
-            <div class="p-3">
-                <h4 class="text-center">My Dashboard</h4>
-                <ul class="nav flex-column mt-4">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
-                            <i class="bi bi-house"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="views/create.php">
-                            <i class="bi bi-person"></i> Create Report
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="auth/logout.php">
-                            <i class="bi bi-box-arrow-right"></i> Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <div class="container my-auto mt-5" style="width: 5000px;">
-                <h1 class="mb-3 fw-semibold">Edit your report complaint</h1>
-                <p class="mb-5">Edit your report about <?php echo $data['title'] ?></p>
-                <form action="" method="POST">
-                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
-                    <div class="mb-3">
-                        <label for="title" class="form-label">Report Name</label>
-                        <input type="text" class="form-control" id="title" name="title" value="<?= $data['title'] ?>" required>
-                    </div>
-                    <div class="mb-5">
-                        <label for="description" class="form-label">Report Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="5"><?= $data['description'] ?></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="updateReport">
-                        Save
-                    </button>
-            </div>
-        </main>
-    </div>
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-            <div class="container"> -->
-                <!-- Toggle Button for Mobile -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                <!-- Links -->
-                <!-- <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <nav class="bg-dark text-white vh-100" style="width: 250px;">
+                <div class="p-3">
+                    <h4 class="text-center">My Dashboard</h4>
+                    <ul class="nav flex-column mt-4">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.php">Dashboard</a>
+                            <a class="nav-link text-white" href="#">
+                                <i class="bi bi-house"></i> Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Update Report</a>
+                            <a class="nav-link text-white" href="views/create.php">
+                                <i class="bi bi-person"></i> Create Report
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../auth/logout.php">Log Out</a>
+                            <a class="nav-link text-white" href="auth/logout.php">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav> -->
+            </nav>
+            <main>
+                <div class="container my-auto mt-5" style="width: 5000px;">
+                    <h1 class="mb-3 fw-semibold">Edit your report complaint</h1>
+                    <p class="mb-5">Edit your report about <?php echo $data['title'] ?></p>
+                    <form action="" method="POST">
+                        <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Report Name</label>
+                            <input type="text" class="form-control" id="title" name="title" value="<?= $data['title'] ?>" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="description" class="form-label">Report Description</label>
+                            <textarea class="form-control" id="description" name="description" rows="5"><?= $data['description'] ?></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="updateReport">
+                            Save
+                        </button>
+                </div>
+            </main>
+        </div>
     </header>
 </body>
 
