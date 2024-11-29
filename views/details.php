@@ -1,6 +1,6 @@
 <?php
 include("../database/connect.php");
-include("../controllers/controllers.php");
+include("../controllers/userController.php");
 
 // HARUS DITAMBAG KETIKA MENGGUNAKAN SESSION
 session_start();
@@ -49,74 +49,51 @@ if (isset($_GET['id'])) {
 
 <body>
     <header>
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <nav class="bg-dark text-white vh-100" style="width: 250px;">
-            <div class="p-3">
-                <h4 class="text-center">My Dashboard</h4>
-                <ul class="nav flex-column mt-4">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../index.php">
-                            <i class="bi bi-house"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="views/create.php">
-                            <i class="bi bi-person"></i> Create Report
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="auth/logout.php">
-                            <i class="bi bi-box-arrow-right"></i> Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <div class="container mt-5" style="width: 9000px;">
-                <div class="card">
-                    <div class="card-body">
-                        <?php echo "<h1 class='text-center fw-bold'>$title</h1>" ?>
-                        <?php echo "<h6 class='text-center '>Reported by: $name</h6>" ?>
-                        <?php echo "<p class='text-justify mt-4'>$description</p>" ?>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-primary btn-sm btn-action w-100 mb-2"
-                            onclick="document.location.href='update.php?id=<?php echo $id ?>'">Edit</button>
-                        <form action="../controllers/delete.php" method="POST">
-                            <input readonly type="hidden" name="id" value="<?= $id ?>">
-                            <button class="btn btn-danger btn-sm btn-action w-100" type="submit"
-                                name="delete">Delete</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </main>
-</div>  
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-            <div class="container"> -->
-                <!-- Toggle Button for Mobile -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                <!-- Links -->
-                <!-- <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+        <div class="d-flex">
+            <!-- Sidebar -->
+            <nav class="bg-dark text-white vh-100" style="width: 250px;">
+                <div class="p-3">
+                    <h4 class="text-center">My Dashboard</h4>
+                    <ul class="nav flex-column mt-4">
                         <li class="nav-item">
-                            <a class="nav-link " href="../index.php">Dashboard</a>
+                            <a class="nav-link text-white" href="../index.php">
+                                <i class="bi bi-house"></i> Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Details Report</a>
+                            <a class="nav-link text-white" href="views/create.php">
+                                <i class="bi bi-person"></i> Create Report
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../auth/logout.php">Log Out</a>
+                            <a class="nav-link text-white" href="auth/logout.php">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav> -->
+            </nav>
+            <main>
+                <div class="container mt-5" style="width: 9000px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <?php echo "<h1 class='text-center fw-bold'>$title</h1>" ?>
+                            <?php echo "<h6 class='text-center '>Reported by: $name</h6>" ?>
+                            <?php echo "<p class='text-justify mt-4'>$description</p>" ?>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-sm btn-action w-100 mb-2"
+                                onclick="document.location.href='update.php?id=<?php echo $id ?>'">Edit</button>
+                            <form action="../controllers/delete.php" method="POST">
+                                <input readonly type="hidden" name="id" value="<?= $id ?>">
+                                <button class="btn btn-danger btn-sm btn-action w-100" type="submit"
+                                    name="delete">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>  
     </header>
 </body>
 
